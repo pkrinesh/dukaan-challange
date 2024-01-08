@@ -9,6 +9,11 @@ export default {
       colors: {
         app: {
           DEFAULT: 'var(--app-bg)',
+          fg: 'var(--app-fg)',
+        },
+        accent: {
+          DEFAULT: 'var(--accent)',
+          fg: 'var(--accent-fg)',
         },
         nav: {
           DEFAULT: 'var(--nav-bg)',
@@ -25,6 +30,21 @@ export default {
         search: {
           DEFAULT: 'var(--search-bg)',
           fg: 'var(--search-fg)',
+        },
+        card: {
+          DEFAULT: 'var(--card-bg)',
+          fg: 'var(--card-fg)',
+          'fg-muted': 'var(--card-fg-muted)',
+        },
+        table: {
+          head: {
+            DEFAULT: 'var(--table-head-bg)',
+            fg: 'var(--table-head-fg)',
+          },
+          fg: 'var(--table-fg)',
+        },
+        divider: {
+          DEFAULT: 'var(--divider)',
         },
       },
     },
