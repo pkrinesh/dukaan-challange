@@ -7,6 +7,9 @@ export default {
     },
     extend: {
       colors: {
+        light: 'var(--light)',
+        dark: 'var(--dark)',
+
         app: {
           DEFAULT: 'var(--app-bg)',
           fg: 'var(--app-fg)',

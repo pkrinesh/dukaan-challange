@@ -6,6 +6,9 @@
 
 @layer base {
   :root {
+    --light: #fff;
+    --dark: #000;
+
     --app-bg: #fafafa;
     --app-fg: #1a181e;
 
