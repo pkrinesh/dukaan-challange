@@ -60,7 +60,7 @@ const navItems: NavItem[] = [
 
 export function Sidebar() {
   return (
-    <div className="flex h-full flex-col bg-nav px-4 py-4">
+    <nav className="flex h-full flex-col bg-nav px-4 py-4">
       <div className="flex">
         <i>
           <Icon.AppIcon />
@@ -73,7 +73,7 @@ export function Sidebar() {
         </div>
         <button className="self-center">
           <i>
-            <Icon.ArrowDown />
+            <Icon.ArrowDownIcon />
           </i>
         </button>
       </div>
@@ -81,6 +81,7 @@ export function Sidebar() {
         {navItems.map(({ name, icon, isActive }) => {
           return (
             <li
+              key={name}
               className={`px-4 py-2 mt-1 -mx-2 rounded cursor-pointer hover:bg-white/10 ${
                 isActive && 'bg-white/10'
               }`}
@@ -109,6 +110,6 @@ export function Sidebar() {
         </div>
         <div></div>
       </div>
-    </div>
+    </nav>
   )
 }

@@ -19,6 +19,13 @@ export default {
             fg: 'var(--nav-card-fg)',
           },
         },
+        border: {
+          DEFAULT: 'var(--border)',
+        },
+        search: {
+          DEFAULT: 'var(--search-bg)',
+          fg: 'var(--search-fg)',
+        },
       },
     },
   },
