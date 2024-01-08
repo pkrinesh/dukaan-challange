@@ -6,6 +6,8 @@
 
 @layer base {
   :root {
+    --app-bg: #fafafa;
+
     --nav-bg: #1e2640;
     --nav-fg: white;
 

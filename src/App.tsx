@@ -1,10 +1,12 @@
+import { Sidebar } from './components/SideBar'
+
 function App() {
   return (
-    <div className="w-full h-screen bg-nav flex justify-center">
-      <p className="text-xl text-nav-fg mt-4">Home</p>
-      <div className="mt-10 bg-nav-card">
-        <p className="text-nav-card-fg">This is card</p>
-      </div>
+    <div className="w-full h-screen flex">
+      <aside className="w-[224px]">
+        <Sidebar />
+      </aside>
+      <div className="flex-1 bg-app"></div>
     </div>
   )
 }
