@@ -20,7 +20,7 @@ export function Pagination({ className }: Pick<IPaginationProps, 'className'>) {
     <Paginate
       totalPages={TOTAL_PAGE}
       edgePageCount={1}
-      middlePagesSiblingCount={windowWidth < 400 ? 0 : 4}
+      middlePagesSiblingCount={windowWidth < 750 ? 0 : 4}
       truncableText="..."
       currentPage={page}
       setCurrentPage={handlePageChange}
