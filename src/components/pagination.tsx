@@ -5,8 +5,10 @@ import { ArrowDownSmallIcon } from './icons'
 
 import { Pagination as Paginate, IPaginationProps } from 'react-headless-pagination'
 import clsx from 'clsx'
+import { useWindowSize } from '../hooks/use-window-size'
 
 export function Pagination({ className }: Pick<IPaginationProps, 'className'>) {
+  const { windowWidth } = useWindowSize()
   const TOTAL_PAGE = 18
   const [page, setPage] = React.useState(13)
 
@@ -18,12 +20,12 @@ export function Pagination({ className }: Pick<IPaginationProps, 'className'>) {
     <Paginate
       totalPages={TOTAL_PAGE}
       edgePageCount={1}
-      middlePagesSiblingCount={4}
+      middlePagesSiblingCount={windowWidth < 400 ? 0 : 4}
       truncableText="..."
       currentPage={page}
       setCurrentPage={handlePageChange}
-      className={cn('w-full flex gap-6 justify-center', className)}
-      truncableClassName="w-10 px-0.5 text-center"
+      className={cn('w-full flex gap-2 sm:gap-6 justify-center', className)}
+      truncableClassName="w-5 sm:w-10 text-center"
     >
       <Paginate.PrevButton
         className={clsx(

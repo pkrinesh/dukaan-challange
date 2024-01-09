@@ -7,16 +7,18 @@ type SearchProps = React.ComponentProps<'input'> & {
 
 export function Search({ className, iconColor, ...rest }: SearchProps) {
   return (
-    <label className="relative">
-      <span className="absolute top-[12px] left-[16px]">
-        <i>
-          <SearchIcon fill={iconColor} />
-        </i>
-      </span>
-      <input
-        className={cn('h-10 pl-10 bg-search text-[15px] text-search-fg rounded-md', className)}
-        {...rest}
-      />
-    </label>
+    <div className="w-full">
+      <label className="relative h-10">
+        <span className="absolute top-0.5 left-4">
+          <i>
+            <SearchIcon fill={iconColor} />
+          </i>
+        </span>
+        <input
+          className={cn('h-10 pl-10 bg-search text-[15px] text-search-fg rounded-md', className)}
+          {...rest}
+        />
+      </label>
+    </div>
   )
 }

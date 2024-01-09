@@ -4,7 +4,7 @@ export function ButtonRoot({ children, className }: React.ComponentProps<'button
   return (
     <button
       className={cn(
-        'flex items-center px-3 h-9 border border-border rounded gap-1.5 text-card-fg-muted',
+        'flex items-center px-3 h-10 border border-border rounded gap-1.5 text-card-fg-muted',
         'hover:bg-search transition',
         className
       )}

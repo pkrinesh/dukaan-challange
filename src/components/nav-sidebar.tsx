@@ -75,11 +75,11 @@ export function Sidebar() {
   const [active, setActive] = React.useState('payments')
 
   return (
-    <nav className="flex h-full flex-col bg-nav px-4 py-4">
+    <nav className="relative z-40 flex w-[224px] h-full flex-col bg-nav px-4 py-4">
       <div className="flex">
-        <i>
-          <Icon.AppIcon />
-        </i>
+        {/* <i> */}
+        <Icon.AppIcon />
+        {/* </i> */}
         <div className="flex-auto ml-3">
           <p className="text-white font-medium">Krinesh</p>
           <a className="text-white opacity-80 text-[13px] underline underline-offset-2 cursor-pointer">
