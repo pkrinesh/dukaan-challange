@@ -8,7 +8,7 @@ import {
 } from './components/icons'
 import { OverviewCard } from './components/overview-card'
 import { Search } from './components/search'
-import { Sidebar } from './components/sidebar'
+import { Sidebar } from './components/nav-sidebar'
 import { TransactionTable } from './components/transaction-table'
 
 function App() {
