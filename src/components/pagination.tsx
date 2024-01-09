@@ -6,7 +6,7 @@ import { ArrowDownSmallIcon } from './icons'
 import { Pagination as Paginate, IPaginationProps } from 'react-headless-pagination'
 import clsx from 'clsx'
 
-export function Pagination({ className }: IPaginationProps) {
+export function Pagination({ className }: Pick<IPaginationProps, 'className'>) {
   const TOTAL_PAGE = 18
   const [page, setPage] = React.useState(13)
 
