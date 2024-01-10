@@ -21,7 +21,7 @@ export function ButtonText({
   className?: string
   children: React.ReactNode
 }) {
-  return <p className={className}>{children}</p>
+  return <p className={cn('text-base', className)}>{children}</p>
 }
 
 export function ButtonIcon({

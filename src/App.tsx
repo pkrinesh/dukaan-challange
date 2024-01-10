@@ -99,7 +99,7 @@ function App() {
           <div className="mt-8 -mx-2 sm:mx-0">
             <TransactionTable />
           </div>
-          <div className="mt-4 text-center flex justify-center">
+          <div className="mt-6 pb-3 lg:pb-0 text-center flex justify-center">
             <Footer />
           </div>
         </main>
