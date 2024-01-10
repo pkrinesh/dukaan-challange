@@ -1,3 +1,4 @@
+import React from 'react'
 import { ButtonIcon, ButtonRoot, ButtonText } from './components/button'
 import { Footer } from './components/footer'
 import {
@@ -7,33 +8,18 @@ import {
   MessageIcon,
   QuestionIcon,
 } from './components/icons'
+import { Sidebar } from './components/nav-sidebar'
 import { OverviewCard } from './components/overview-card'
 import { Search } from './components/search'
-import { Sidebar } from './components/nav-sidebar'
 import { TransactionTable } from './components/transaction-table'
-import React from 'react'
 import { cn } from './utils'
-import { useWindowSize } from './hooks/use-window-size'
 
 function App() {
-  const { windowWidth } = useWindowSize()
   const [isOpen, setIsOpen] = React.useState(false)
-
-  React.useEffect(() => {
-    if (windowWidth > 1024) {
-      setIsOpen(false)
-    }
-  }, [windowWidth])
 
   return (
     <div className="w-full relative h-screen flex overflow-hidden">
-      {isOpen ? (
-        <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
-      ) : (
-        <div className="overflow-none h-screen hidden lg:block">
-          <Sidebar />
-        </div>
-      )}
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="flex-1 bg-app overflow-auto">
         <header className="flex flex-col justify-center items-center bg-light px-2 sm:px-8 py-3 border-b border-border">
           <div className="flex gap-2 items-center justify-between w-full">
@@ -109,25 +95,3 @@ function App() {
 }
 
 export default App
-
-export function Modal({
-  isOpen,
-  setIsOpen,
-}: {
-  isOpen: boolean
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
-}) {
-  return (
-    <>
-      {isOpen && (
-        <div className={cn('w-full h-full absolute z-20')}>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute z-30 inset-0 w-full bg-card-fg opacity-70 lg:hidden"
-          />
-          <Sidebar />
-        </div>
-      )}
-    </>
-  )
-}
