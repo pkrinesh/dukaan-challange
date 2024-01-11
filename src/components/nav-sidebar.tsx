@@ -93,7 +93,8 @@ export function Sidebar({
     <>
       <button
         className={clsx(
-          'absolute z-10 inset-0 bg-card-fg opacity-70 transition ease-in-out',
+          'absolute z-10 inset-0 bg-card-fg opacity-70',
+          'animate-in slide-in-from-left',
           !isOpen ? 'hidden' : ''
         )}
         onClick={() => setIsOpen(false)}
@@ -101,7 +102,7 @@ export function Sidebar({
       <nav
         className={clsx(
           'fixed lg:relative lg:translate-x-0 z-10 flex w-[224px] h-full flex-col bg-nav px-4 py-4 transition',
-          !isOpen ? ' -translate-x-[224px]' : ''
+          !isOpen ? '-translate-x-[224px]' : ''
         )}
       >
         <div className="flex">
